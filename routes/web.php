@@ -15,6 +15,22 @@ Route::get('hai', function () {
     return 'Hai ini routes hai';
 });
 
+Route::get('hello', function () {
+    return view('hello');
+});
+
+Route::get('haihai','HelloController@test');
+
+
+Route::get('pengguna', function () {
+    return App\User::all();
+});
+
+
+Route::Resource('category', 'CategoryController');
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
