@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('hai', function () {
+    return 'Hai ini routes hai';
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
