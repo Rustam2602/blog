@@ -15,7 +15,7 @@ class CategoryController extends Controller
 
     public function index()
     {
-        return 'ini index category';
+        return view('category.index');
     }
 
     /**
@@ -39,7 +39,8 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        return $request->all();
+        category::create($request->all());
+        return redirect ('category');
     }
 
     /**
